@@ -7,5 +7,6 @@ angular.module('animalShelterApp')
     $http.get('/api/things').success(function(awesomeThings) {
       $scope.awesomeThings = awesomeThings;
     });
+    
 
   });
