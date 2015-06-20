@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('animalShelterApp')
-  .controller('NavbarCtrl', function ($scope, $location) {
+  .controller('NavbarCtrl', function ($scope, $location, $mdSidenav, $mdMedia) {
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
@@ -12,4 +12,7 @@ angular.module('animalShelterApp')
     $scope.isActive = function(route) {
       return route === $location.path();
     };
+    $scope.openLeftMenu = function() {
+    $mdSidenav('left').toggle();
+  };
   });
